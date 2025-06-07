@@ -20,7 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 10px 30px;
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             position: sticky;
@@ -28,13 +28,21 @@
             z-index: 999;
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
-        header .logo {
-            font-size: 22px;
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        header .logo-container img {
+            height: 40px;
+            margin-right: 12px;
+        }
+        header .logo-container span {
+            font-size: 20px;
             font-weight: 900;
             letter-spacing: 1px;
         }
         header nav a {
-            margin-left: 30px;
+            margin-left: 25px;
             text-decoration: none;
             color: #111;
             font-weight: 500;
@@ -45,38 +53,26 @@
         }
         .hero {
             height: 100vh;
-            background: url('https://via.placeholder.com/2000x1000/000000/FFFFFF?text=%E5%88%9D%E5%BE%B7%E5%BE%A9%E8%88%88%E6%9C%83+Hero') center/cover no-repeat;
+            background: linear-gradient(135deg, #faf3e0 0%, #f5e0c3 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            color: #111;
+            padding: 20px;
         }
-        .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
-            z-index: 1;
-        }
-        .hero-content {
-            z-index: 2;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        .hero img {
+            width: 180px;
+            margin-bottom: 20px;
         }
         .hero h1 {
-            font-size: 72px;
+            font-size: 64px;
             font-weight: 900;
-            margin: 0 0 20px;
+            margin: 0 0 15px;
         }
         .hero p {
-            font-size: 24px;
+            font-size: 22px;
             max-width: 700px;
             margin: auto;
         }
@@ -148,27 +144,43 @@
             font-size: 14px;
             border-top: 1px solid #eee;
         }
+        footer img {
+            height: 40px;
+            display: block;
+            margin: 10px auto;
+        }
     </style>
 </head>
 <body>
 <header>
-    <div class="logo">初德复兴会</div>
+    <div class="logo-container">
+        <img src="https://regneron.github.io/zyychud-resurgence-website/zyychud_logo_transparent.png" alt="初德复兴会徽标">
+        <span>初德复兴会</span>
+    </div>
     <nav>
         <a href="#about">关于</a>
         <a href="#members">成员</a>
         <a href="#vision">愿景</a>
+        <a href="#support">支持</a>
         <a href="#contact">联系</a>
     </nav>
 </header>
 <section class="hero">
-    <div class="hero-content">
-        <h1>初德复兴会</h1>
-        <p>Zyy & Chud Resurgence | 吾等将复兴初德，启迪未来</p>
-    </div>
+    <img src="https://regneron.github.io/zyychud-resurgence-website/zyychud_logo_transparent.png" alt="初德复兴会徽标">
+    <h1>初德复兴会</h1>
+    <p>Zyy & Chud Resurgence | 吾等将复兴初德，启迪未来</p>
 </section>
 <section id="about" class="section" data-aos="fade-up">
     <h2>关于我们</h2>
-    <p>初德复兴会，致力于探索古今智慧与当代创新的交汇。我们是一个跨文化、跨学科的思想共同体，秉持“复初归真，德润四方”的理念，推动知识共享、文明交流与精神复兴。</p>
+    <p>初德复兴会，源于张煜阳（Zyy）与Chud对东西方文明融合与古今智慧复兴的共同追求。名“初德”，意为归本初德，涵养正道，通达人心。复兴之旨，在于促进思想自由交流，重塑文化认同，启迪未来之智慧。复兴会汇聚跨学科学者、文化工作者、技术创新者，倡导“复初归真，德润四方”。我们相信，文化自觉与德性实践，是现代社会可持续发展的根基。</p>
+    <p style="margin-top: 40px;">
+    <img src="https://regneron.github.io/zyychud-resurgence-website/zyychud_logo_transparent.png" alt="徽标释义" style="width:120px; margin-bottom:20px;">
+    <br>徽标释义：<br>
+    古罗马柱象征文明根基与理性精神；<br>
+    束棒寓意秩序、团结与公共精神；<br>
+    月桂枝代表德行、荣耀与复兴之意志；<br>
+    双语会名体现东西交流、文化互鉴。
+    </p>
 </section>
 <div class="parallax">
     初德 • 精神
@@ -192,7 +204,6 @@
     <h2>我们的愿景</h2>
     <p>在瞬息万变的时代，重拾初心、崇尚德行，以技术与文化为桥梁，构建更加包容、智慧与和谐的人类社会。</p>
 </section>
-
 <section id="support" class="section" data-aos="fade-up">
     <h2>支持我们</h2>
     <p>复兴路远，志同道合者常在。<br>
@@ -203,12 +214,12 @@
         <a href="#" style="display:inline-block; padding:12px 24px; background:#000; color:#fff; text-decoration:none; font-weight:bold; border-radius:6px;">立即赞助我们</a>
     </p>
 </section>
-
 <section id="contact" class="section" data-aos="fade-up">
     <h2>联系我们</h2>
-    <p>邮箱：530037571@qq.com<br>敬请关注我们的更多动态。</p>
+    <p>邮箱：contact@zyychudresurgence.org<br>敬请关注我们的更多动态。</p>
 </section>
 <footer>
+    <img src="https://regneron.github.io/zyychud-resurgence-website/zyychud_logo_transparent.png" alt="初德复兴会徽标">
     &copy; 2025 初德复兴会 Zyy & Chud Resurgence. All rights reserved.
 </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
